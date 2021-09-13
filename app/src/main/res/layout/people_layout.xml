@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/storiesActiveRelativeLayoutID"
+        android:layout_below="@+id/appbarLayoutID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <LinearLayout
+            android:id="@+id/storiesLinearLayoutID"
+            android:layout_width="wrap_content"
+            android:background="@drawable/text_back"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/storiesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STORIES"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_bold"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activeLinearLayoutID"
+            android:layout_width="wrap_content"
+            android:background="@drawable/text_back"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/addTextViewID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_bold"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/peopleFrameLyoutID"
+        android:layout_below="@+id/storiesActiveRelativeLayoutID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+        <RelativeLayout
+            android:id="@+id/storiesRelativeLayoutID"
+            android:layout_width="match_parent"
+            android:visibility="invisible"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/joinGroupRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activeRelativeLayoutID"
+            android:layout_width="match_parent"
+            android:visibility="invisible"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/addFriendRecyclerViewID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

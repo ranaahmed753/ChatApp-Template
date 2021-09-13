@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentRelativeLayoutID"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/activePeopleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Active People"
+            android:textColor="@color/black"
+            android:layout_marginTop="80dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/roboto_bold"/>
+    <HorizontalScrollView
+        android:id="@+id/activeChatRelativeLayoutID"
+        android:layout_below="@+id/activePeopleText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/createRoomRelativeLayoutID"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:background="@drawable/custom_create_room">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_add"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activeChatRecyclerViewID"
+                android:layout_toRightOf="@+id/createRoomRelativeLayoutID"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/recentPeopleText"
+            android:layout_below="@+id/activeChatRelativeLayoutID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Chat"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/roboto_bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatRecyclerViewID"
+                android:layout_below="@+id/recentPeopleText"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

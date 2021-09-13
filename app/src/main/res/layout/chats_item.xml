@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chatMainLayoutID"
+    android:background="@drawable/ripple_effect"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/frameLayoutID"
+        android:layout_width="60dp"
+        android:layout_margin="10dp"
+        android:layout_height="60dp">
+        <RelativeLayout
+            android:id="@+id/chatImageRelativeLayoutID"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="7dp"
+            android:background="@drawable/custom_image_border">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/chatImageID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:elevation="10dp"
+                android:src="@drawable/person"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginHorizontal="38dp"
+            android:layout_marginVertical="50dp"
+            android:background="@drawable/chat_inactive_back"/>
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/chatDetailsRelativeLayoutID"
+        android:layout_toRightOf="@+id/frameLayoutID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp">
+        <com.codesgood.views.JustifiedTextView
+            android:id="@+id/chatNameID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ashley Zamberg"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_bold"/>
+
+        <com.codesgood.views.JustifiedTextView
+            android:id="@+id/chatmessageID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chatNameID"
+            android:fontFamily="@font/roboto_medium"
+            android:text="hey ashley!whats going on"
+            android:textColor="@color/dark_gray"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</RelativeLayout>

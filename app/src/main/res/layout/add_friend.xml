@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayoutID"
+    android:layout_width="match_parent"
+    android:background="@drawable/ripple_effect"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/imageNameRelativeLayoutID"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/addFriendImageViewID"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/avatar_person"
+                />
+            <com.codesgood.views.JustifiedTextView
+                android:id="@+id/addFreindNameID"
+                android:layout_below="@+id/addFriendImageViewID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ashley Zamberg"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto_bold"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_toRightOf="@+id/imageNameRelativeLayoutID"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp">
+            <RelativeLayout
+                android:id="@+id/addFriendButtonID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/add_friend_btn"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/white"
+                    android:text="Add Friend"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
